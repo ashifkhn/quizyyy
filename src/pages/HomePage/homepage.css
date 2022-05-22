@@ -16,6 +16,13 @@
 
 h1{
     color: #5D5A58;
+    font-size: 3rem;
+}
+
+
+h2{
+    color: #5D5A58;
+    font-size: 1.5rem;
 }
 
 .quiz_setting{
