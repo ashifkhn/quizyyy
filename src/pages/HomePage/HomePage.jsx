@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "./homepage.css";
 import HomePageImage from "../../assets/undraw_questions_re_1fy7 (1).svg";
 import { Button, MenuItem, TextField } from "@mui/material";
 import Categories from "../../data/Category";
 import { useNavigate } from "react-router-dom";
+import { useUserContext } from "../../context/UserContext";
 
-export const HomePage = ({ name, setName, fetchQues }) => {
-  // console.log(name);
-  const [category, setCategory] = useState("");
-  const [difficulty, setDifficulty] = useState("");
-  const [error, setError] = useState(false);
+export const HomePage = () => {
   const navigate = useNavigate();
-  // console.log(category);
-  // console.log(difficulty);
+  const {
+    name,
+    setName,
+    category,
+    setCategory,
+    difficulty,
+    setDifficulty,
+    error,
+    setError,
+    fetchQues,
+  } = useUserContext();
   const onClickHandler = () => {
     if (!category || !difficulty || !name) {
       setError(true);
