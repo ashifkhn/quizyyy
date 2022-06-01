@@ -5,7 +5,6 @@ import { HomePage } from './pages/HomePage/HomePage';
 import { QuizPage } from './pages/Quiz/QuizPage';
 import { ResultPage } from './pages/Result/ResultPage';
 
-
 function App() {
   return (
     <BrowserRouter>
